@@ -1,24 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>GlobalLink Logistics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>GlobalLink Logistics</h1>
-    <p>All-in-one logistics & shipping solutions</p>
-  </header>
 
-  <section>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">GlobalLink Logistics</div>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#track">Track</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Reliable Global Shipping Solutions</h1>
+    <p>Fast, secure, and affordable logistics services worldwide</p>
+    <a href="#track" class="btn">Track Shipment</a>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="card">🚢 Sea Freight</div>
+      <div class="card">✈️ Air Freight</div>
+      <div class="card">🚚 Road Transport</div>
+      <div class="card">📦 Warehousing</div>
+    </div>
+  </section>
+
+  <!-- TRACKING -->
+  <section id="track" class="track">
     <h2>Track Your Shipment</h2>
-    <input type="text" id="trackingId" placeholder="Enter Tracking ID">
+    <input type="text" placeholder="Enter Tracking Number" />
     <button onclick="track()">Track</button>
     <p id="result"></p>
   </section>
 
-  <script src="script.js"></script>
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      GlobalLink Logistics is a trusted shipping partner providing end-to-end
+      logistics solutions for businesses and individuals worldwide.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@globallinklogistics.com</p>
+    <p>Phone: +34 600 000 000</p>
+  </section>
+
+  <footer>
+    © 2025 GlobalLink Logistics. All rights reserved.
+  </footer>
+
+  <script>
+    function track() {
+      document.getElementById("result").innerText =
+        "Tracking system coming soon.";
+    }
+  </script>
+
 </body>
 </html>
