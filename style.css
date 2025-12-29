@@ -147,3 +147,15 @@ header, .navbar {
   margin: 40px auto;
   max-width: 1100px;
 }
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
