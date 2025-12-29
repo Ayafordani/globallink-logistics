@@ -89,7 +89,13 @@ section {
   border: none;
   cursor: pointer;
 }
-
+.track-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 /* FOOTER */
 footer {
   background: #0b3c5d;
@@ -207,4 +213,29 @@ header, .navbar {
 
 .whatsapp-float:hover {
   transform: scale(1.1);
+}
+/* TRACK RESULT */
+.track-result {
+  display: none;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  white-space: pre-line;
+}
+
+.track-result.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-left: 6px solid #2e7d32;
+}
+
+.track-result.error {
+  background: #fdecea;
+  color: #c62828;
+  border-left: 6px solid #c62828;
 }
