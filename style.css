@@ -97,3 +97,39 @@ footer {
   padding: 20px;
   text-align: center;
 }
+.track {
+  padding: 60px 20px;
+  background: #f4f6f8;
+  text-align: center;
+}
+
+.track h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.track-box {
+  margin-top: 20px;
+}
+
+.track input {
+  padding: 12px;
+  width: 250px;
+  max-width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.track button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  border: none;
+  background: #0a3d62;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.track button:hover {
+  background: #082f4d;
+}
