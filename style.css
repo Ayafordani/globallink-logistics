@@ -133,3 +133,17 @@ footer {
 .track button:hover {
   background: #082f4d;
 }
+section {
+  padding: 80px 20px;
+}
+
+header, .navbar {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.track, .services, .contact {
+  background: white;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1100px;
+}
