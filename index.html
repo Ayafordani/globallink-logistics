@@ -101,5 +101,30 @@
    aria-label="Chat on WhatsApp">
    💬
 </a>
+  <!-- Tracking result -->
+<div id="result" class="track-result"></div>
+
+<script>
+  function track() {
+    const input = document.getElementById("trackingInput").value.trim();
+    const result = document.getElementById("result");
+
+    if (input === "") {
+      result.style.display = "block";
+      result.className = "track-result error";
+      result.innerText = "Please enter a valid tracking number.";
+      return;
+    }
+
+    result.style.display = "block";
+    result.className = "track-result success";
+    result.innerText =
+      "Tracking Number: " + input +
+      "\nStatus: In transit\nEstimated Delivery: 3–5 business days.";
+  }
+</script>
+
+</body>
+</html>
 </body>
 </html>
