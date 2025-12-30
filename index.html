@@ -219,6 +219,12 @@
         "Tracking number not found.\nPlease check and try again.";
     }
   }
+  
+  function submitForm(event) {
+    event.preventDefault();
+    const result = document.getElementById("formResult");
+    result.innerText = "Thank you! Your message has been sent. Our team will contact you shortly.";
+  }
 </script>
 
 
