@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>GlobalLink Logistics</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Small internal CSS -->
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     .hidden {
       display: none;
     }
@@ -28,23 +20,29 @@
     </div>
   </header>
 
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Global Logistics & Freight</h2>
+    <p>Reliable shipping & tracking worldwide</p>
+  </section>
 
-  <!-- JAVASCRIPT (ALWAYS AT BOTTOM) -->
+  <!-- SERVICES -->
+  <section class="services">
+    ...
+  </section>
+
+  <!-- TRACKING (ONLY HERE, NOT AT TOP) -->
+  <!-- (you can add it back later here) -->
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 GlobalLink Logistics
+  </footer>
+
+  <!-- JAVASCRIPT (ALWAYS LAST) -->
   <script>
     function track() {
-      const input = document
-        .getElementById("trackingInput")
-        .value.trim();
-
-      const result = document.getElementById("trackResult");
-
-      if (input === "") {
-        alert("Please enter a tracking number");
-        return;
-      }
-
-      result.classList.remove("hidden");
-      result.innerText = "Tracking Number: " + input;
+      ...
     }
   </script>
 
