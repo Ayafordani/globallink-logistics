@@ -4,15 +4,68 @@
   <meta charset="UTF-8" />
   <title>GlobalLink Logistics</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" /><style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
-  
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Small internal CSS -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
 
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container brand">
+      <h1>GlobalLink Logistics</h1>
+    </div>
+  </header>
+
+  <!-- TRACKING SECTION -->
+  <section class="tracking">
+    <h2>Track Your Shipment</h2>
+
+    <input
+      type="text"
+      id="trackingInput"
+      placeholder="Enter tracking number"
+    />
+
+    <button onclick="track()">Track</button>
+
+    <div id="trackResult" class="hidden">
+      Tracking result will appear here.
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT (ALWAYS AT BOTTOM) -->
+  <script>
+    function track() {
+      const input = document
+        .getElementById("trackingInput")
+        .value.trim();
+
+      const result = document.getElementById("trackResult");
+
+      if (input === "") {
+        alert("Please enter a tracking number");
+        return;
+      }
+
+      result.classList.remove("hidden");
+      result.innerText = "Tracking Number: " + input;
+    }
+  </script>
+
+</body>
+</html>
   <!-- NAVBAR -->
   <header class="header">
   <div class="container brand">
