@@ -227,38 +227,52 @@
   <!-- Tracking result -->
 <div id="result" class="track-result"></div>
 <script>
-  const demoData = {
-    "GL123456": "In Transit – Madrid to Paris",
-    "GL789012": "Delivered – Berlin",
-    "GL555888": "Pending Customs Clearance – Spain"
-  };
+<script>
+const demoData = {
+  "GL-1001": {
+    status: "In Transit",
+    location: "Madrid, Spain",
+    eta: "2 days"
+  },
+  "GL-2002": {
+    status: "Out for Delivery",
+    location: "Barcelona, Spain",
+    eta: "Today"
+  },
+  "GL-3003": {
+    status: "Delivered",
+    location: "Valencia, Spain",
+    eta: "Delivered"
+  }
+};
 
-  function track() {
-    const input = document
-      .getElementById("trackingInput")
-      .value.trim()
-      .toUpperCase();
+function track() {
+  const input = document
+    .getElementById("trackingInput")
+    .value.trim()
+    .toUpperCase();
 
-    const result = document.getElementById("result");
-    
-  if (input === "") {
+  const result = document.getElementById("trackResult");
   result.style.display = "block";
-  result.className = "track-result error";
-  result.innerHTML = "❌ Please enter a valid tracking number.";
-  return;
-}
-   
 
-    result.style.display = "block";
-if (demoData[input]) {
-  result.className = "track-result success";
-  result.innerHTML = `
-    <div><strong>Tracking Number:</strong> ${input}</div>
-    <div><strong>Status:</strong> ${demoData[input]}</div>
-  `;
-} else {
-  result.className = "track-result error";
-  result.innerHTML = "❌ Tracking number not found. Please check and try again.";
+  if (!input) {
+    result.className = "track-result error";
+    result.innerHTML = "❌ Please enter a tracking number.";
+    return;
+  }
+
+  if (demoData[input]) {
+    const data = demoData[input];
+    result.className = "track-result success";
+    result.innerHTML = `
+      <strong>Status:</strong> ${data.status}<br>
+      <strong>Current Location:</strong> ${data.location}<br>
+      <strong>Estimated Delivery:</strong> ${data.eta}
+    `;
+  } else {
+    result.className = "track-result error";
+    result.innerHTML = "❌ Tracking number not found.";
+  }
 }
 </script>
   
