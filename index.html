@@ -137,7 +137,25 @@
     <div id="result" class="track-result"></div>
   </div>
 </section>
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p class="contact-subtitle">
+      Get in touch with our logistics experts for quotes or inquiries.
+    </p>
 
+    <form class="contact-form" onsubmit="submitForm(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Company (optional)">
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="formResult" class="form-result"></p>
+  </div>
+</section>
   <!-- ABOUT -->
   <section id="about" class="about">
     <h2>About Us</h2>
