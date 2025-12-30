@@ -258,23 +258,28 @@
       .toUpperCase();
 
     const result = document.getElementById("result");
-
-    if (input === "") {
-      alert("Please enter a tracking number");
-      return;
-    }
+    
+  if (input === "") {
+  result.style.display = "block";
+  result.className = "track-result error";
+  result.innerHTML = "❌ Please enter a valid tracking number.";
+  return;
+}
+   
 
     result.style.display = "block";
-
-    if (demoData[input]) {
-      result.innerText =
-        "Tracking Number: " + input +
-        "\nStatus: " + demoData[input];
-    } else {
-      result.innerText =
-        "Tracking number not found.\nPlease check and try again.";
-    }
-  }
+if (demoData[input]) {
+  result.className = "track-result success";
+  result.innerHTML = `
+    <div><strong>Tracking Number:</strong> ${input}</div>
+    <div><strong>Status:</strong> ${demoData[input]}</div>
+  `;
+} else {
+  result.className = "track-result error";
+  result.innerHTML = "❌ Tracking number not found. Please check and try again.";
+}
+</script>
+  
 </script>
 
 </body>
