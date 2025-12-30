@@ -561,3 +561,48 @@ header, .navbar {
   margin-top: 10px;
   font-weight: 600;
 }
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    display: block;
+  }
+}
+/* STEP 2: Mobile-friendly tracking input */
+.track-section input {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.track-section button {
+  padding: 12px 25px;
+  font-size: 16px;
+}
+/* STEP 4: Improve text size on very small screens */
+@media (max-width: 480px) {
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
