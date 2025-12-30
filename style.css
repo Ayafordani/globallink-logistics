@@ -512,3 +512,43 @@ header, .navbar {
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
+/* =========================
+   TRACKING RESULT (PRO)
+========================= */
+
+.track-result {
+  display: none;
+  margin-top: 25px;
+  padding: 20px 25px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border-left: 6px solid #2563eb;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1f2937;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.track-result.success {
+  border-left-color: #16a34a;
+}
+
+.track-result.error {
+  border-left-color: #dc2626;
+  background: #fef2f2;
+}
+
+.track-result .label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.track-result .value {
+  font-weight: 500;
+  color: #111827;
+}
+
+.track-result .status {
+  margin-top: 10px;
+  font-weight: 600;
+}
