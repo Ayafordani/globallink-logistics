@@ -122,7 +122,9 @@
     <p class="tracking-subtitle">
       Enter your tracking number to get real-time shipment updates.
     </p>
-
+<p style="text-align:center; font-size:14px; color:#888;">
+  Demo numbers: <strong>GL-1001</strong>, <strong>GL-2002</strong>, <strong>GL-3003</strong>
+</p>
     <div class="track-box">
       <input
         type="text"
@@ -170,26 +172,37 @@
 </a>
   <!-- Tracking result -->
 <div id="result" class="track-result"></div>
-
 <script>
   function track() {
     const input = document.getElementById("trackingInput").value.trim();
     const result = document.getElementById("result");
 
+    const demoData = {
+      "GL-1001": "Status: Delivered\nLocation: Madrid, Spain\nDelivered on: 12 Aug 2024",
+      "GL-2002": "Status: In Transit\nCurrent Location: Paris, France\nEstimated Delivery: 2 days",
+      "GL-3003": "Status: Processing\nWarehouse: Berlin, Germany\nExpected Dispatch: Tomorrow"
+    };
+
+    result.style.display = "block";
+
     if (input === "") {
-      result.style.display = "block";
       result.className = "track-result error";
-      result.innerText = "Please enter a valid tracking number.";
+      result.innerText = "Please enter a tracking number.";
       return;
     }
 
-    result.style.display = "block";
-    result.className = "track-result success";
-    result.innerText =
-      "Tracking Number: " + input +
-      "\nStatus: In transit\nEstimated Delivery: 3–5 business days.";
+    if (demoData[input]) {
+      result.className = "track-result success";
+      result.innerText =
+        "Tracking Number: " + input + "\n" + demoData[input];
+    } else {
+      result.className = "track-result error";
+      result.innerText =
+        "Tracking number not found.\nPlease check and try again.";
+    }
   }
 </script>
+
 
 </body>
 </html>
