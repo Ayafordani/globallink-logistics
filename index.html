@@ -115,17 +115,25 @@
     <li> Global shipping network</li>
   </ul>
 </section> 
-<!-- TRACKING -->
-<section id="track" class="track">
-  <h2>Track Your Shipment</h2>
-  <p>Enter your tracking number to check shipment status.</p>
+<!-- TRACKING SECTION -->
+<section id="track" class="tracking">
+  <div class="container">
+    <h2>Track Your Shipment</h2>
+    <p class="tracking-subtitle">
+      Enter your tracking number to get real-time shipment updates.
+    </p>
 
-<div class="track-box">
-  <input type="text" id="trackingInput" placeholder="Enter tracking number">
-  <button onclick="track()">Track</button>
-</div>
+    <div class="track-box">
+      <input
+        type="text"
+        id="trackingInput"
+        placeholder="e.g. GL-458921"
+      />
+      <button onclick="track()">Track Shipment</button>
+    </div>
 
-<div id="result" class="track-result"></div> 
+    <div id="result" class="track-result"></div>
+  </div>
 </section>
 
   <!-- ABOUT -->
