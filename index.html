@@ -297,42 +297,37 @@
   <!-- Tracking result -->
 <div id="result" class="track-result"></div>
 <script>
+  const demoData = {
+    "GL123456": "In Transit – Madrid to Paris",
+    "GL789012": "Delivered – Berlin",
+    "GL555888": "Pending Customs Clearance – Spain"
+  };
+
   function track() {
-    const input = document.getElementById("trackingInput").value.trim();
+    const input = document
+      .getElementById("trackingInput")
+      .value.trim()
+      .toUpperCase();
+
     const result = document.getElementById("result");
 
-    const demoData = {
-      "GL-1001": "Status: Delivered\nLocation: Madrid, Spain\nDelivered on: 12 Aug 2024",
-      "GL-2002": "Status: In Transit\nCurrent Location: Paris, France\nEstimated Delivery: 2 days",
-      "GL-3003": "Status: Processing\nWarehouse: Berlin, Germany\nExpected Dispatch: Tomorrow"
-    };
-
-    result.style.display = "block";
-
     if (input === "") {
-      result.className = "track-result error";
-      result.innerText = "Please enter a tracking number.";
+      alert("Please enter a tracking number");
       return;
     }
 
+    result.style.display = "block";
+
     if (demoData[input]) {
-      result.className = "track-result success";
       result.innerText =
-        "Tracking Number: " + input + "\n" + demoData[input];
+        "Tracking Number: " + input +
+        "\nStatus: " + demoData[input];
     } else {
-      result.className = "track-result error";
       result.innerText =
         "Tracking number not found.\nPlease check and try again.";
     }
   }
-  
-  function submitForm(event) {
-    event.preventDefault();
-    const result = document.getElementById("formResult");
-    result.innerText = "Thank you! Your message has been sent. Our team will contact you shortly.";
-  }
 </script>
-
 
 </body>
 </html>
