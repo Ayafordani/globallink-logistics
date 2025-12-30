@@ -136,6 +136,59 @@
 
     <div id="result" class="track-result"></div>
   </div>
+  <section class="tracking-section">
+  <h2>Track Your Shipment</h2>
+
+  <input
+    type="text"
+    id="trackingInput"
+    placeholder="Enter Consignment No."
+  />
+
+  <button onclick="track()">Track Result</button>
+
+  <div id="trackResult" class="track-card hidden">
+
+    <div class="status-badge">
+      SHIPMENT STATUS: PICKED UP
+    </div>
+
+    <img
+      src="https://barcode.tec-it.com/barcode.ashx?data=ACC067836347951-CARGO&code=Code128"
+      alt="Tracking Barcode"
+      class="barcode"
+    />
+
+    <div class="info-section">
+      <h3>Shipment Information</h3>
+      <p><strong>Origin:</strong> Germany</p>
+      <p><strong>Destination:</strong> Spain</p>
+      <p><strong>Carrier:</strong> DHL</p>
+      <p><strong>Shipment Mode:</strong> Air Freight</p>
+      <p><strong>Weight:</strong> 0.2 kg</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Package Details</h3>
+      <p><strong>Qty:</strong> 1</p>
+      <p><strong>Description:</strong> Discreet Package</p>
+      <p><strong>Total Freight:</strong> €50</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Shipper Information</h3>
+      <p>Brooks Henderson</p>
+      <p>Germany</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Receiver Information</h3>
+      <p>Annas C. O.</p>
+      <p>Madrid, Spain</p>
+    </div>
+
+  </div>
+
 </section>
 <!-- CONTACT SECTION -->
 <section id="contact" class="contact">
