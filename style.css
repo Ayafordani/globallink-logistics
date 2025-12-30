@@ -401,3 +401,57 @@ header, .navbar {
   color: #c62828;
   border-left: 5px solid #c62828;
 }
+/* CONTACT SECTION */
+.contact {
+  background: #f4f6f9;
+  padding: 80px 40px;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #0b3c5d;
+}
+
+.contact-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.contact-form button {
+  background: #0b3c5d;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #06293d;
+}
+
+.form-result {
+  margin-top: 20px;
+  text-align: center;
+  color: #2e7d32;
+  font-weight: 500;
+}
